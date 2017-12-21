@@ -37,9 +37,8 @@ class MainActivity : AppCompatActivity(), MainView {
     }
 
     private fun initUi() {
-        getRecyclerView().apply {
-            layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-        }
+        getRecyclerView().layoutManager = LinearLayoutManager(this,
+                LinearLayoutManager.HORIZONTAL, false)
     }
 
     private fun getRecyclerView() = findViewById<RecyclerView>(R.id.options)
